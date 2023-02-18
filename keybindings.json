@@ -20,7 +20,7 @@
         "command": "cursorDown",
         "when": "textInputFocus"
     },
-
+    
     // Jumps
     {
         "key": "alt+j",
@@ -68,7 +68,21 @@
 
     // Commands
     {
+        "key": "ctrl+0",
+        "command": "workbench.action.firstEditorInGroup"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "center-editor-window.center",
+        "when": "editorTextFocus || findWidgetVisible"
+    },
+    {
         "key": "ctrl+backspace",
+        "command": "deleteRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+backspace",
         "command": "deleteAllRight",
         "when": "textInputFocus && !editorReadonly"
     },
@@ -186,10 +200,6 @@
         "command": "numberedBookmarks.jumpToBookmark9"
     },
     {
-        "key": "ctrl+0",
-        "command": "numberedBookmarks.jumpToBookmark0"
-    },
-    {
         "key": "ctrl+shift+9",
         "command": "numberedBookmarks.toggleBookmark9",
         "when": "editorTextFocus"
@@ -259,8 +269,6 @@
         "command": "-numberedBookmarks.toggleBookmark5",
         "when": "editorTextFocus"
     },
-
-    
     {
         "key": "ctrl+shift+4",
         "command": "numberedBookmarks.toggleBookmark4",
@@ -271,8 +279,6 @@
         "command": "-numberedBookmarks.toggleBookmark4",
         "when": "editorTextFocus"
     },
-
-    
     {
         "key": "ctrl+shift+3",
         "command": "numberedBookmarks.toggleBookmark3",
@@ -307,7 +313,7 @@
         "command": "-numberedBookmarks.toggleBookmark1",
         "when": "editorTextFocus"
     },
-
+    
     {
         "key": "ctrl+shift+0",
         "command": "numberedBookmarks.toggleBookmark0",
@@ -318,7 +324,7 @@
         "command": "-numberedBookmarks.toggleBookmark0",
         "when": "editorTextFocus"
     },
-
+    
     // Fixes
     {
         "key": "shift+cmd+\\",
@@ -478,5 +484,79 @@
         "key": "ctrl+n",
         "command": "-selectNextCodeAction",
         "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-deleteLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-center-editor-window.center",
+        "when": "editorTextFocus || findWidgetVisible"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "alt+z",
+        "command": "-bracket-select.undo-select",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "showPrevParameterHint",
+        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-showPrevParameterHint",
+        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
     }
 ]
